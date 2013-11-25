@@ -8,7 +8,6 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-#include<assert.h>
 #include<getopt.h>
 
 void callkproc();
@@ -18,7 +17,6 @@ int main( int argc,char* argv[] )
 {
 
 	int next_option;
-	//char* argument=argv[1];
 	const char* program_name;
 	const char* short_option="hv";
 	const struct option long_option[]={
@@ -34,24 +32,21 @@ do {
 		case 'v': printf("kproc v.0\n");break;
 		case '?':
 			 fprintf(stderr,"Wrong Option");
-//			 fprintf(stderr,"Wrongaaaaaaa");
-				//exit(1);	
+
 		printf("\nTry option -h or --help \n");
 		exit(1);break;
-		case -1: break;//option completed
+		case -1: break;
 		default :abort();
 	   }
     }while(next_option != -1);
 i=optind;
 printf("optind val: %d\n",optind);
 printf("argc  :%d\n",argc);
-//argument[1]=argv[1];
 for(i=optind;i<argc;++i)
 {
 printf("Argumenttssss %s\n",argv[i]);
 }
-//argument=argv;
-//printf("wwwwwfwfw:%s"argument[1]);
+
 if( 1 == optind )
 {
 	printf("Process Name : %s\n",argv[1]);

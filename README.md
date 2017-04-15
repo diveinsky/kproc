@@ -1,14 +1,12 @@
-
-detail explanation at www.abhinavmann.blogspot.com/code
 kproc
 =====
 
 kills process with signal 9
 
-1 #download script kproc.c
-2 #chmod 744 kproc.c
-3 #gcc -o kproc kproc.c
-4 set softlink for kproc generated
-5 #kproc <process name>
+#download script kproc.c
+#chmod 744 kproc.c
+#gcc -o kproc kproc.c
+#set softlink for kproc generated
+#kproc <process name>
 
-e.g. kproc sleep
+#e.g. kproc sleep
